@@ -1,0 +1,33 @@
+---
+import NavButton from '@/components/Header/NavButton.astro';
+import Navigation from '../Header/Navigation.astro';
+---
+
+<header>
+  <div>
+    <NavButton />
+    <Navigation />
+  </div>
+</header>
+
+<style>
+  header {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+    height: 50px;
+  }
+
+  div {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+</style>
