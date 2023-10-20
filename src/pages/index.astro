@@ -5,63 +5,204 @@ import Card from '../components/Card.astro';
 
 <Layout title='Welcome to Astro.'>
   <main>
-    <video width='100%' height='100%' playsinline autoplay muted>
-      <source src='/baby.mp4' type='video/webm; codecs="vp8.0, vorbis"' />
-      <source src='/images/baby.mp4' type='video/mp4' />
-      <source src='/images/baby.mp4' type='video/ogg' />
-       Your browser does not support the video tag.
-    </video>
-    <div>
-      <ul role='list' class='link-card-grid'>
-        <Card
-          href='https://docs.astro.build/'
-          title='Service'
-          body='Learn how Astro works and explore the official API docs.'
-        />
-        <Card
-          href='https://astro.build/integrations/'
-          title='Service'
-          body='Supercharge your project with new frameworks and libraries.'
-        />
-        <Card
-          href='https://astro.build/themes/'
-          title='Service'
-          body='Explore a galaxy of community-built starter themes.'
-        />
-        <Card
-          href='https://astro.build/chat/'
-          title='Service'
-          body='Come say hi to our amazing Discord community. ❤️'
-        />
-      </ul>
+    <div class='image'></div>
+    <div class='intro'>
+      <div class='inner'>
+        <h1>Welcome to my homepage</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt
+          sint modi quidem fuga, eius maiores delectus impedit dolores est
+          voluptas optio. Id nulla tempora expedita necessitatibus sunt error
+          culpa.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt
+          sint modi quidem fuga, eius maiores delectus impedit dolores est
+          voluptas optio. Id nulla tempora expedita necessitatibus sunt error
+          culpa.
+        </p>
+      </div>
     </div>
+    <ul role='list' class='link-card-grid'>
+      <Card
+        href='https://docs.astro.build/'
+        title='Service'
+        body='Learn how Astro works and explore the official API docs.'
+      />
+      <Card
+        href='https://astro.build/integrations/'
+        title='Service'
+        body='Supercharge your project with new frameworks and libraries.'
+      />
+    </ul>
+    <div class='intro'>
+      <div class='inner'>
+        <h1>About Me</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt
+          sint modi quidem fuga, eius maiores delectus impedit dolores est
+          voluptas optio. Id nulla tempora expedita necessitatibus sunt error
+          culpa.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt
+          sint modi quidem fuga, eius maiores delectus impedit dolores est
+          voluptas optio. Id nulla tempora expedita necessitatibus sunt error
+          culpa.
+        </p>
+      </div>
+    </div>
+    <div class='about'>
+      <div class='container'>
+        <div class='description'>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt
+            sint modi quidem fuga, eius maiores delectus impedit dolores est
+            voluptas optio. Id nulla tempora expedita necessitatibus sunt error
+            culpa.
+          </p>
+        </div>
+        <div class='me'></div>
+      </div>
+    </div>
+    <div class='intro'>
+      <div class='inner'>
+        <h1>My Services</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt
+          sint modi quidem fuga, eius maiores delectus impedit dolores est
+          voluptas optio. Id nulla tempora expedita necessitatibus sunt error
+          culpa.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt
+          sint modi quidem fuga, eius maiores delectus impedit dolores est
+          voluptas optio. Id nulla tempora expedita necessitatibus sunt error
+          culpa.
+        </p>
+      </div>
+    </div>
+    <ul class='tiles'>
+      <li>
+        <div class='box'></div>
+      </li>
+      <li>
+        <div class='box'></div>
+      </li>
+      <li>
+        <div class='box'></div>
+      </li>
+      <li>
+        <div class='box'></div>
+      </li>
+    </ul>
   </main>
 </Layout>
 
 <style>
-  main {
-    font-size: 20px;
-    line-height: 1.6;
+  .image {
+    width: 100%;
+    height: 584px;
+    background-color: #c0c0c0;
   }
 
-  div {
-    margin: auto;
-    padding: 1rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
-    color: white;
+  .intro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+  }
+
+  .inner {
+    max-width: 640px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 400px;
+    line-height: 26px;
+    color: #333;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+  }
+  main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding-bottom: 236px;
   }
 
   .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 2rem;
-    padding: 0;
+    all: unset;
+    width: 100%;
+    max-width: 1368px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+  .about {
+    width: 100%;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c0c0c0;
+    padding: 8px;
   }
 
-  @media (min-width: 960px) {
-    video {
-      margin-top: -178px;
+  .container {
+    width: 100%;
+    max-width: 768px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px;
+    gap: 24px;
+  }
+
+  .container > div:first-of-type {
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .me {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background-color: #333;
+  }
+
+  .tiles {
+    all: unset;
+    list-style: none;
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    flex-flow: wrap;
+    justify-content: center;
+  }
+
+  .box {
+    width: 335px;
+    height: 184px;
+    background-color: #c0c0c0;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 32px;
+    }
+    .link-card-grid {
+      flex-direction: row;
     }
   }
 </style>
