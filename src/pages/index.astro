@@ -1,133 +1,40 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import {
+  TextTile,
+  About,
+  CardList,
+  BoxTiles,
+} from '@/components/Organisms/Home';
 ---
 
 <Layout title='Welcome to Astro.'>
   <main>
-    <div class='image'></div>
-    <div class='intro'>
-      <div class='inner'>
-        <h1>Welcome to my homepage</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt
-          sint modi quidem fuga, eius maiores delectus impedit dolores est
-          voluptas optio. Id nulla tempora expedita necessitatibus sunt error
-          culpa.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt
-          sint modi quidem fuga, eius maiores delectus impedit dolores est
-          voluptas optio. Id nulla tempora expedita necessitatibus sunt error
-          culpa.
-        </p>
-      </div>
-    </div>
-    <ul role='list' class='link-card-grid'>
-      <Card
-        href='https://docs.astro.build/'
-        title='Service'
-        body='Learn how Astro works and explore the official API docs.'
-      />
-      <Card
-        href='https://astro.build/integrations/'
-        title='Service'
-        body='Supercharge your project with new frameworks and libraries.'
-      />
-    </ul>
-    <div class='intro'>
-      <div class='inner'>
-        <h1>About Me</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt
-          sint modi quidem fuga, eius maiores delectus impedit dolores est
-          voluptas optio. Id nulla tempora expedita necessitatibus sunt error
-          culpa.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt
-          sint modi quidem fuga, eius maiores delectus impedit dolores est
-          voluptas optio. Id nulla tempora expedita necessitatibus sunt error
-          culpa.
-        </p>
-      </div>
-    </div>
-    <div class='about'>
-      <div class='container'>
-        <div class='description'>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt
-            sint modi quidem fuga, eius maiores delectus impedit dolores est
-            voluptas optio. Id nulla tempora expedita necessitatibus sunt error
-            culpa.
-          </p>
-        </div>
-        <div class='me'></div>
-      </div>
-    </div>
-    <div class='intro'>
-      <div class='inner'>
-        <h1>My Services</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt
-          sint modi quidem fuga, eius maiores delectus impedit dolores est
-          voluptas optio. Id nulla tempora expedita necessitatibus sunt error
-          culpa.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt
-          sint modi quidem fuga, eius maiores delectus impedit dolores est
-          voluptas optio. Id nulla tempora expedita necessitatibus sunt error
-          culpa.
-        </p>
-      </div>
-    </div>
-    <ul class='tiles'>
-      <li>
-        <div class='box'></div>
-      </li>
-      <li>
-        <div class='box'></div>
-      </li>
-      <li>
-        <div class='box'></div>
-      </li>
-      <li>
-        <div class='box'></div>
-      </li>
-    </ul>
+    <div></div>
+    <TextTile
+      title='Welcome to my homepage'
+      text1='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt sint modi quidem fuga, eius maiores delectus impedit dolores est voluptas optio. Id nulla tempora expedita necessitatibus sunt error culpa.'
+      text2='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt sint modi quidem fuga, eius maiores delectus impedit dolores est voluptas optio. Id nulla tempora expedita necessitatibus sunt error culpa.'
+    />
+    <CardList />
+    <TextTile
+      title='About Me'
+      text1='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt sint modi quidem fuga, eius maiores delectus impedit dolores est voluptas optio. Id nulla tempora expedita necessitatibus sunt error culpa.'
+      text2='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt sint modi quidem fuga, eius maiores delectus impedit dolores est voluptas optio. Id nulla tempora expedita necessitatibus sunt error culpa.'
+    />
+    <About
+      description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt sint modi quidem fuga, eius maiores delectus impedit dolores est voluptas optio. Id nulla tempora expedita necessitatibus sunt error culpa.'
+    />
+    <TextTile
+      title='My Services'
+      text1='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt sint modi quidem fuga, eius maiores delectus impedit dolores est voluptas optio. Id nulla tempora expedita necessitatibus sunt error culpa.'
+      text2='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt sint modi quidem fuga, eius maiores delectus impedit dolores est voluptas optio. Id nulla tempora expedita necessitatibus sunt error culpa.'
+    />
+    <BoxTiles />
   </main>
 </Layout>
 
 <style>
-  .image {
-    width: 100%;
-    height: 584px;
-    background-color: #c0c0c0;
-  }
-
-  .intro {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    padding: 8px;
-  }
-
-  .inner {
-    max-width: 640px;
-  }
-  p {
-    font-size: 16px;
-    font-weight: 400px;
-    line-height: 26px;
-    color: #333;
-  }
-
-  h1 {
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 36px;
-  }
   main {
     width: 100%;
     display: flex;
@@ -137,72 +44,9 @@ import Card from '../components/Card.astro';
     gap: 24px;
     padding-bottom: 236px;
   }
-
-  .link-card-grid {
-    all: unset;
+  div {
     width: 100%;
-    max-width: 1368px;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-  }
-  .about {
-    width: 100%;
-    height: 480px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 584px;
     background-color: #c0c0c0;
-    padding: 8px;
-  }
-
-  .container {
-    width: 100%;
-    max-width: 768px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    padding: 8px;
-    gap: 24px;
-  }
-
-  .container > div:first-of-type {
-    max-width: 300px;
-    text-align: center;
-  }
-
-  .me {
-    width: 240px;
-    height: 240px;
-    border-radius: 50%;
-    background-color: #333;
-  }
-
-  .tiles {
-    all: unset;
-    list-style: none;
-    width: 100%;
-    display: flex;
-    gap: 8px;
-    flex-flow: wrap;
-    justify-content: center;
-  }
-
-  .box {
-    width: 335px;
-    height: 184px;
-    background-color: #c0c0c0;
-  }
-
-  @media (min-width: 768px) {
-    h1 {
-      font-size: 32px;
-    }
-    .link-card-grid {
-      flex-direction: row;
-    }
   }
 </style>

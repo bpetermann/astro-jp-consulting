@@ -1,0 +1,35 @@
+---
+import { Card } from '@/components/Molecules/App';
+---
+
+<ul role='list'>
+  <Card
+    href='https://docs.astro.build/'
+    title='Service'
+    body='Learn how Astro works and explore the official API docs.'
+  />
+  <Card
+    href='https://astro.build/integrations/'
+    title='Service'
+    body='Supercharge your project with new frameworks and libraries.'
+  />
+</ul>
+
+<style>
+  ul {
+    all: unset;
+    width: 100%;
+    max-width: 1368px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  @media (min-width: 768px) {
+    ul {
+      flex-direction: row;
+    }
+  }
+</style>
