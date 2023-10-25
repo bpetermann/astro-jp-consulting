@@ -1,5 +1,5 @@
 ---
-import { Header } from '@/components/Organisms/App';
+import { Header, Footer } from '@/components/Organisms/App';
 interface Props {
   title: string;
 }
@@ -20,6 +20,7 @@ const { title } = Astro.props;
   <body>
     <Header />
     <slot />
+    <Footer />
   </body>
 </html>
 <style is:global>

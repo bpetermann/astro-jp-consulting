@@ -1,0 +1,50 @@
+---
+const navItems = [
+  {
+    path: '/',
+    label: 'Home',
+  },
+  {
+    path: '/about',
+    label: 'About',
+  },
+  {
+    path: '/services',
+    label: 'Services',
+  },
+];
+---
+
+<nav>
+  <div>
+    {
+      navItems.map(({ path, label }) => {
+        return <a href={path}>{label}</a>;
+      })
+    }
+  </div>
+</nav>
+
+<style>
+  a {
+    color: #fff;
+  }
+
+  nav {
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 720px;
+    padding: 16px;
+  }
+
+
+</style>

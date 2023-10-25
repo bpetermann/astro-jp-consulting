@@ -1,7 +1,26 @@
+---
+const navItems = [
+  {
+    path: '/',
+    label: 'Home',
+  },
+  {
+    path: '/about',
+    label: 'About',
+  },
+  {
+    path: '/services',
+    label: 'Services',
+  },
+];
+---
+
 <nav class='navbar'>
-  <a href='/'>Home</a>
-  <a href='/about'>About</a>
-  <a href='/'>Services</a>
+  {
+    navItems.map(({ path, label }) => {
+      return <a href={path}>{label}</a>;
+    })
+  }
 </nav>
 
 <style>
