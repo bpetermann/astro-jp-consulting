@@ -1,10 +1,10 @@
-<button>
+<a href='#nav'>
   <div></div>
   <div></div>
-</button>
+</a>
 
 <style>
-  button {
+  a {
     all: unset;
     cursor: pointer;
     width: 70px;
@@ -16,7 +16,7 @@
     gap: 6px;
   }
 
-  button:hover {
+  a:hover {
     gap: 0px;
     background-color: #c0c0c0;
     transition: 0.6s;
@@ -28,13 +28,13 @@
     transition: 0.6s;
   }
 
-  button:hover div:first-child {
+  a:hover div:first-child {
     width: 25%;
     background-color: #fff;
     transform: translate(0, 0) rotate(45deg);
   }
 
-  button:hover div:last-child {
+  a:hover div:last-child {
     width: 25%;
     margin: -2px;
     background-color: #fff;
@@ -42,7 +42,7 @@
   }
 
   @media (min-width: 960px) {
-    button {
+    a {
       display: none;
     }
   }

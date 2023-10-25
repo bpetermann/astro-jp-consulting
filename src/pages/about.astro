@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { TextTile } from '@/components/Organisms/Home';
+---
+
+<Layout title='Welcome to Astro.'>
+  <main>
+    <TextTile
+      title='Welcome to my homepage'
+      text1='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt sint modi quidem fuga, eius maiores delectus impedit dolores est voluptas optio. Id nulla tempora expedita necessitatibus sunt error culpa.'
+      text2='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt sint modi quidem fuga, eius maiores delectus impedit dolores est voluptas optio. Id nulla tempora expedita necessitatibus sunt error culpa.'
+    />
+  </main>
+</Layout>
+
+<style>
+  main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding-bottom: 236px;
+  }
+</style>

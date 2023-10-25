@@ -1,6 +1,6 @@
 ---
 import { NavButton } from '@/components/Atoms/App';
-import { Navigation } from '@/components/Molecules/App';
+import { Navigation, MobileNav } from '@/components/Molecules/App';
 ---
 
 <header>
@@ -9,6 +9,7 @@ import { Navigation } from '@/components/Molecules/App';
     <Navigation />
   </div>
 </header>
+<MobileNav />
 
 <style>
   header {
@@ -20,10 +21,10 @@ import { Navigation } from '@/components/Molecules/App';
     justify-content: center;
     padding: 0 30px;
     height: 50px;
-    opacity: 0.8;
+    /* opacity: 0.8; */
   }
 
-  div {
+  header > div {
     width: 100%;
     max-width: 1368px;
     display: flex;
