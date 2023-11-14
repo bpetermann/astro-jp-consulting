@@ -1,25 +1,22 @@
 ---
-import { NavButton } from '@/components/Atoms/App';
-import { Navigation, MobileNav } from '@/components/Molecules/App';
+import { Navigation } from '@/components/Molecules/App';
 import ScrollIndicator from './ScrollIndicator';
 ---
 
 <header>
   <div>
     <div>
-      <NavButton />
       <Navigation />
     </div>
   </div>
   <ScrollIndicator client:only />
 </header>
 
-<MobileNav />
-
 <style>
   header {
     top: 0;
     position: sticky;
+    display: none;
   }
 
   header > div:first-of-type {
@@ -39,5 +36,11 @@ import ScrollIndicator from './ScrollIndicator';
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+  }
+
+  @media (min-width: 960px) {
+    header {
+      display: block;
+    }
   }
 </style>

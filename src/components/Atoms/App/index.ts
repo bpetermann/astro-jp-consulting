@@ -1,1 +1,1 @@
-export { default as NavButton } from './NavButton.astro';
+export { default as NavButton } from './NavButton.tsx';
