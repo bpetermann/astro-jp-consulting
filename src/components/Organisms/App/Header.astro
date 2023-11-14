@@ -1,21 +1,29 @@
 ---
 import { NavButton } from '@/components/Atoms/App';
 import { Navigation, MobileNav } from '@/components/Molecules/App';
+import ScrollIndicator from './ScrollIndicator';
 ---
 
 <header>
   <div>
-    <NavButton />
-    <Navigation />
+    <div>
+      <NavButton />
+      <Navigation />
+    </div>
   </div>
+  <ScrollIndicator client:only />
 </header>
+
 <MobileNav />
 
 <style>
   header {
-    background-color: white;
-    position: sticky;
     top: 0;
+    position: sticky;
+  }
+
+  header > div:first-of-type {
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,7 +32,7 @@ import { Navigation, MobileNav } from '@/components/Molecules/App';
     border-bottom: 1px solid #c0c0c0;
   }
 
-  header > div {
+  div > div {
     width: 100%;
     max-width: 1368px;
     display: flex;
