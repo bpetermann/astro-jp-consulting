@@ -1,5 +1,4 @@
-import { NavButton } from '@/components/Atoms/App';
-import ScrollIndicator from './ScrollIndicator';
+import { NavButton, ScrollIndicator } from '@/components/Atoms/App';
 import styles from './MobileHeader.module.css';
 import { useState } from 'react';
 
