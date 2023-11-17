@@ -25,8 +25,13 @@ const { title } = Astro.props;
   </body>
 </html>
 <style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap');
   html {
-    font-family: system-ui, sans-serif;
+    font-family:
+      Open Sans,
+      Helvetica,
+      Arial,
+      sans-serif;
     background: #fff;
     background-size: 224px;
   }
@@ -41,32 +46,26 @@ const { title } = Astro.props;
   }
 
   h1 {
-    font-weight: 600;
-    line-height: 36px;
-    font-size: 24px;
+    font-weight: 800;
+    line-height: 44px;
+    font-size: 36px;
   }
 
   p {
     font-weight: 400px;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 22px;
   }
 
   @media (min-width: 768px) {
     h1 {
-      font-size: 30px;
+      font-weight: 600;
+      line-height: 36px;
+      font-size: 24px;
     }
     p {
-      font-size: 20px;
-      line-height: 28px;
+      font-size: 16px;
+      line-height: 26px;
     }
-  }
-
-  code {
-    font-family:
-      Open Sans,
-      Helvetica,
-      Arial,
-      sans-serif;
   }
 </style>

@@ -10,7 +10,7 @@ const { title, text1, text2 } = Astro.props;
 
 <div class='intro'>
   <div class='inner'>
-    <h1>{title}</h1>
+    <div class='title'>{title}</div>
     <p>
       {text1}
     </p>
@@ -21,6 +21,11 @@ const { title, text1, text2 } = Astro.props;
 </div>
 
 <style>
+  .title {
+    font-weight: 600;
+    line-height: 28px;
+    font-size: 20px;
+  }
   div:first-of-type {
     text-align: center;
     display: flex;
@@ -30,5 +35,13 @@ const { title, text1, text2 } = Astro.props;
 
   div:last-of-type {
     max-width: 640px;
+  }
+
+  @media (min-width: 768px) {
+    .title {
+      font-weight: 600;
+      line-height: 36px;
+      font-size: 24px;
+    }
   }
 </style>
