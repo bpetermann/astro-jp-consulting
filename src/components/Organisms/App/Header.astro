@@ -20,7 +20,7 @@ import { Navigation } from '@/components/Molecules/App';
   }
 
   header > div:first-of-type {
-    background-color: white;
+    background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,6 +42,13 @@ import { Navigation } from '@/components/Molecules/App';
     header {
       display: block;
       z-index: 10;
+      background-color: #d5c3aa;
+    }
+  }
+
+  @media (min-width: 1368px) {
+    header {
+      background-color: transparent;
     }
   }
 </style>
