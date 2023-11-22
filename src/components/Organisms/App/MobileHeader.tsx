@@ -6,13 +6,9 @@ const MobileHeader = () => {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <header className={styles.header}>
-        <div>
-          <div>
-            <NavButton onClick={() => setOpen((prev) => !prev)} open={open} />
-          </div>
-        </div>
-        <ScrollIndicator />
+      <header className={`${styles.header} ${open ? styles.open : ''}`}>
+        {!open && <ScrollIndicator />}
+        <NavButton onClick={() => setOpen((prev) => !prev)} open={open} />
       </header>
       {open && (
         <>

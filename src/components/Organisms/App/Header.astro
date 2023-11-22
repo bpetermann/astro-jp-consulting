@@ -4,12 +4,12 @@ import { Navigation } from '@/components/Molecules/App';
 ---
 
 <header>
+  <ScrollIndicator client:only />
   <div>
     <div>
       <Navigation />
     </div>
   </div>
-  <ScrollIndicator client:only />
 </header>
 
 <style>
@@ -32,23 +32,12 @@ import { Navigation } from '@/components/Molecules/App';
   div > div {
     width: 100%;
     max-width: 1368px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
   }
 
   @media (min-width: 960px) {
     header {
       display: block;
       z-index: 10;
-      background-color: #d5c3aa;
-    }
-  }
-
-  @media (min-width: 1368px) {
-    header {
-      background-color: transparent;
     }
   }
 </style>

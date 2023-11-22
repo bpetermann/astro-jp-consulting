@@ -4,15 +4,9 @@
   left: 0;
   z-index: 1;
   width: 100%;
+  background-color: #fff;
 }
 
 .container > div {
-  height: 1px;
   background-color: #e1b80d;
-}
-
-@media (min-width: 960px) {
-  .container {
-    padding: 0px 24px;
-  }
 }

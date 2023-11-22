@@ -24,7 +24,7 @@ const ScrollIndicator = () => {
     <div className={styles.container}>
       <div
         className={styles.progressMainStyle}
-        style={{ width: `${scrollTop}%`, height: !scrollTop ? '0px' : '1px' }}
+        style={{ width: `${scrollTop}%`, height: !scrollTop ? '0px' : '4px' }}
       ></div>
     </div>
   );
